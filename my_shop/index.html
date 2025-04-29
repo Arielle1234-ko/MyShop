@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore our responsive e-commerce page featuring a variety of high-quality products for your home.">
+    <meta name="keywords" content="e-commerce, shop, home products, furniture, living room, bedroom, online shopping">
+    <meta name="author" content="Team_Wave">
+    <title>E-commerce Team Wave</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/vnd.icon" href="Assets/favicon_1.ico">
+</head>
+<body>
+    <header class="bg-White p-3 mb-4">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-White bg-White">
+                <a class="navbar-brand fw-bold" href="#">
+                    <img src="Assets/Logo.png" alt="Logo" class="me-2">
+                </a>
+                <ul class="navbar-nav">
+                <li class="nav-item p-2 d-md-none">
+                    <a href="Login.html"><img src="Assets/Cart_Button.png" alt="Cart_Button"></a>
+                </li>
+                 </ul>
+                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item me-3">
+                            <a class="nav-link" href="#">HOME</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link" href="#">SHOP</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">MAGAZINE</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item d-none d-md-block me-5 mt-2">
+                            <a href="Signup.html"> <img src="Assets/Cart_Button.png" alt="Cart_Button"></a>
+                        </li>
+                        <li class="nav-item center">
+                            <a class="nav-link" href="Login.html">LOGIN</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="container mb-4">
+        <div class="row">
+            <div class="col-md-8 w-75 d-none d-sm-none d-md-block">
+                <div class="search-container">
+                    <div class=" d-flex align-items-center">
+                        <img src="Assets/Search.png" alt="Second Logo" class="secondary-logo">
+                    </div>
+                    <div class="input-group">
+                        <input type="text" class="form-control border-0 px-0 fw-bold" placeholder="Search for products..."  value="living room">
+                        <span class="input-group-text border-0">
+                            <span>Powered by <b class="Algo">Algolia</b></span>
+                            <i><img src="Assets/Sajari_Logo.png" alt=""></i> 
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- Barre de recherche sur petits écrans -->
+            <div class="col-12 w-100 d-block d-sm-bloc d-md-none">
+                <div class="search-container">
+                    <div class=" d-flex align-items-center">
+                        <img src="Assets/Search.png" alt="Second Logo" class="secondary-logo">
+                    </div>
+                    <div class="input-group">
+                        <input type="text" class="form-control border-0 px-0 fw-bold" placeholder="Search for products..."  value="living room">
+                        <span class="input-group-text border-0">
+                            <span>Powered by <b class="Algo">Algolia</b></span>
+                            <i><img src="Assets/Sajari_Logo.png" alt=""></i> 
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- Powered sur petits écrans -->
+            <div class="input-group-text-sm d-md-none text-end mt-2">
+                <span>Powered by <b class="Algo">Algolia</b></span>
+                <i><img src="Assets/Sajari_Logo.png" alt=""></i>
+            </div>
+            <div class="col-md-4 d-none d-md-block w-25" id="BlocMath">
+                <select class="form-select px-0 pt-2" id="BestMatch">
+                    <option >Best match</option>
+                    <option>Price: Low to High</option>
+                    <option>Price: High to Low</option>
+                </select>
+            </div>
+            <!-- Best pour les petits ecrans -->
+            <div class="col-12 d-md-none mt-4">
+                <select class="mobileFilterSelect form-select px-0">
+                    <option selected>Best match</option>
+                    <option>Price: Low to High</option>
+                    <option>Price: High to Low</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+
+<div class="container mb-4 mt-5">
+    <div class="row">
+        <div class="col-md-3 filters-desktop">
+            <h6 class="desktop-filter-title mb-4">FILTER BY</h6>
+            <div class="filter-item">
+                <select class="Filter_element form-select px-0">
+                    <option>Collection</option>
+                    <option>Living Room</option>
+                    <option>Bedroom</option>
+                </select>
+            </div>
+            <div class="filter-item mt-3">
+                <select class="Filter_element form-select px-0" >
+                    <option>Color</option>
+                    <option>Red</option>
+                    <option>Blue</option>
+                </select>
+            </div>
+            <div class="filter-item mt-3">
+                <select class="Filter_element form-select px-0">
+                    <option>Category</option>
+                    <option>Sofas</option>
+                    <option>Tables</option>
+                </select>
+            </div>
+            <div class=" mt-3">
+                <label class="form-label">Price Range</label>
+                <div class="range-slider" id="slider">
+                    <div class="thumb" id="thumbMin"></div>
+                    <div class="thumb" id="thumbMax"></div>
+                    <div class="range" id="range"></div>
+                </div>
+                <div class="price-labels">
+                    <span id="priceMinLabel">$0</span>
+                    <span id="priceMaxLabel">$10,000+</span>
+                </div>
+            </div>
+            </div>
+        <div class="col-12 d-md-none mb-4">
+            <select class="mobileFilterSelect form-select px-0">
+                <option selected>Filters</option>
+                <option>Collection</option>
+                <option>Color</option>
+                <option>Category</option>
+                <option>Price Range</option>
+            </select>
+        </div>
+
+        <div class="col-md-9">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4 mb-2">
+              
+                <div class="col-md-4 mb-4">
+                    <div class="card product-card border-0">
+                        <img src="Assets/bungalow.jpg" alt="Bungalow_clean" class="card-img-top">
+                        <div class="card-body d-flex flex-column">
+                         
+                            <div class="d-flex justify-content-between align-items-center ">
+                                <h5 class="product-title mb-0">Bungalow</h5>
+                                <span class="price">$10,600</span>
+                            </div>
+                            <p class="product-category mb-1">BUNGALOW</p>
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mt-auto">
+                                    <div class="star-rating" data-rating="0">
+                                        <i class="bi bi-star-fill" data-value="1"></i>
+                                        <i class="bi bi-star-fill" data-value="2"></i>
+                                        <i class="bi bi-star-fill" data-value="3"></i>
+                                        <i class="bi bi-star-fill" data-value="4"></i>
+                                        <i class="bi bi-star" data-value="5"></i>
+                                    </div>
+                                    <div>
+                                        <i class="bi bi-cart-plus cart-icon">
+                                            <a class="nav-link" href="Signup.html"></a>
+                                        </i>
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card  product-card border-0">
+                        <img src="Assets/villa_hauteur.jpg" alt="Villa_en_hauteur" class="card-img-top">
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="product-title mb-0">Villa en hauteur</h5>
+                                <span class="price">$30,600</span>
+                            </div>
+                            <div>
+                                <p class="product-category mb-1">VILLA</p>
+                                <div class="d-flex justify-content-between align-items-center mt-auto">
+                                    <div class="star-rating" data-rating="0">
+                                        <i class="bi bi-star-fill" data-value="1"></i>
+                                        <i class="bi bi-star-fill" data-value="2"></i>
+                                        <i class="bi bi-star-fill" data-value="3"></i>
+                                        <i class="bi bi-star-fill" data-value="4"></i>
+                                        <i class="bi bi-star" data-value="5"></i>
+                                    </div>
+                                    <div>
+                                        <i class="bi bi-cart-plus cart-icon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card  product-card border-0">
+                        <img src="Assets/villa_en_route.jpg" alt="Villa_au_bord" class="card-img-top">
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="product-title mb-0">Villa isolé</h5>
+                                <span class="price">$25,600</span>
+                            </div>
+                            <div>
+                                <p class="product-category mb-1">LOTIE</p>
+                                <div class="d-flex justify-content-between align-items-center mt-auto">
+                                    <div class="star-rating" data-rating="0">
+                                        <i class="bi bi-star-fill" data-value="1"></i>
+                                        <i class="bi bi-star-fill" data-value="2"></i>
+                                        <i class="bi bi-star-fill" data-value="3"></i>
+                                        <i class="bi bi-star-fill" data-value="4"></i>
+                                        <i class="bi bi-star" data-value="5"></i>
+                                    </div>
+                                    <div>
+                                        <i class="bi bi-cart-plus cart-icon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-13 mt-3">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+                <div class="col">
+                    <div class="card  product-card border-0">
+                        <img src="Assets/villa_mer.jpg" alt="Villa_en_mer" class="card-img-top">
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="product-title mb-0">Assienta</h5>
+                                <span class="price">$52,600</span>
+                            </div>
+                            <div>
+                                <p class="product-category mb-1">ASSIENTA</p>
+                                <div class="d-flex justify-content-between align-items-center mt-auto">
+                                    <div class="star-rating" data-rating="0">
+                                        <i class="bi bi-star-fill" data-value="1"></i>
+                                        <i class="bi bi-star-fill" data-value="2"></i>
+                                        <i class="bi bi-star-fill" data-value="3"></i>
+                                        <i class="bi bi-star-fill" data-value="4"></i>
+                                        <i class="bi bi-star" data-value="5"></i>
+                                    </div>
+                                    <div>
+                                        <i class="bi bi-cart-plus cart-icon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card  product-card border-0">
+                        <img src="Assets/villa_montagne.jpg" alt="Au_dessus_dune" class="card-img-top">
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="product-title mb-0">Montagne</h5>
+                                <span class="price">$56,600</span>
+                            </div>
+                            <div>
+                                <p class="product-category mb-1">BUNKER</p>
+                                <div class="d-flex justify-content-between align-items-center mt-auto">
+                                    <div class="star-rating" data-rating="0">
+                                        <i class="bi bi-star-fill" data-value="1"></i>
+                                        <i class="bi bi-star-fill" data-value="2"></i>
+                                        <i class="bi bi-star-fill" data-value="3"></i>
+                                        <i class="bi bi-star-fill" data-value="4"></i>
+                                        <i class="bi bi-star" data-value="5"></i>
+                                    </div>
+                                    <div>
+                                        <i class="bi bi-cart-plus cart-icon"></i>
+                                    </div>
+                                </div>
+                            </div>                           
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card  product-card border-0">
+                        <img src="Assets/villa_plage.jpg" alt="Villa_plage" class="card-img-top">
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="product-title mb-0">PlAGES</h5>
+                                <span class="price">$90,000</span>
+                            </div>
+                            <div>
+                                <p class="product-category mb-1">PLAGES</p>
+                                <div class="d-flex justify-content-between align-items-center mt-auto">
+                                    <div class="star-rating" data-rating="0">
+                                        <i class="bi bi-star-fill" data-value="1"></i>
+                                        <i class="bi bi-star-fill" data-value="2"></i>
+                                        <i class="bi bi-star-fill" data-value="3"></i>
+                                        <i class="bi bi-star-fill" data-value="4"></i>
+                                        <i class="bi bi-star" data-value="5"></i>
+                                    </div>
+                                    <div>
+                                        <i class="bi bi-cart-plus cart-icon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card  product-card border-0">
+                        <img src="Assets/villa_sur_ile.jpg" alt="Villa_ile" class="card-img-top">
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="product-title mb-0">Villa à ile</h5>
+                                <span class="price">$2,600</span>
+                            </div>
+                            <div>
+                                <p class="product-category mb-1">ILE</p>
+                                <div class="d-flex justify-content-between align-items-center mt-auto">
+                                    <div class="star-rating" data-rating="0">
+                                        <i class="bi bi-star-fill" data-value="1"></i>
+                                        <i class="bi bi-star-fill" data-value="2"></i>
+                                        <i class="bi bi-star-fill" data-value="3"></i>
+                                        <i class="bi bi-star-fill" data-value="4"></i>
+                                        <i class="bi bi-star" data-value="5"></i>
+                                    </div>
+                                    <div>
+                                        <i class="bi bi-cart-plus cart-icon"></i>
+                                    </div>
+                                </div>
+                            </div>                         
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container d-flex justify-content-left my-5">
+    <nav>
+        <ul class="pagination">
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">4</a></li>
+            <li class="page-item"><a class="page-link" href="#">5</a></li>
+            <li class="page-item"><a class="page-link" href="#">6</a></li>
+            <li class="page-item"><a class="page-link" href="#">7</a></li>
+            <li class="page-item"><a class="page-link" href="#">8</a></li>
+            <li class="page-item"><a class="page-link" href="#">9</a></li>
+            <li class="page-item"><a class="page-link" href="#">10</a></li>
+            <li class="page-item"><a class="page-link" href="#">&#62;</a></li>
+        </ul>
+    </nav>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<SCript src="scripts.js"></SCript>
+</body>
+</html>
